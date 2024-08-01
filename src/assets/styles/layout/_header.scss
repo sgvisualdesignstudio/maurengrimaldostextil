@@ -1,0 +1,84 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+header{
+  background-color: rgba($primary-color, .7) ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  border-bottom: 3px solid $secondary-purple;
+  position: fixed;
+  width: 100%;
+  z-index: 900;
+
+
+  nav{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    ul{
+      display: none;
+      align-items: center;
+      gap: 1rem;
+      position: absolute;
+      top: -700px;
+      left: -2000px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: right;
+      padding-left: 0px;
+      @include respond-to('lg'){
+        display: flex;
+        position: initial;
+        margin: 0;
+        font-size: 1rem;
+      }
+      &.active{
+        display: block;
+        width: 100%;
+        top: 120%;
+        left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $secondary-purple;
+        @include respond-to('md'){
+          display: flex;
+          position: initial;
+          margin: 0;
+          font-size: 1rem;
+          background-color: $primary-color;
+          width: fit-content;
+        }
+        
+      }
+      li{
+        list-style: none;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 2rem;
+        border-bottom: #fff 1px solid;
+        &:last-child{
+          border-bottom: none;
+        }
+        @include respond-to('md'){
+          border: none;
+        }
+        a{
+          color: #fff;
+          text-decoration: none;
+          font-size: 1.2rem;
+          
+          transition: all 0.3s ease;
+          &:hover{
+            color: $primary-blue;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid $primary-blue;  
+            padding-bottom: 5px;
+            margin-bottom: -5px;
+          } 
+        }
+      }
+    }
+  }
+}

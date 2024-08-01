@@ -1,0 +1,53 @@
+@import 'variables';
+
+// Mixin para los breakpoints
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' no está definido en \$breakpoints.";
+  }
+}
+
+// Otros mixins (flex, etc.)
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-wrap {
+  flex-wrap: wrap;
+}
+
+@mixin justify-content($value) {
+  justify-content: $value;
+}
+
+@mixin align-items($value) {
+  align-items: $value;
+}
+
+@mixin align-self($value) {
+  align-self: $value;
+}
+
+@mixin order($value) {
+  order: $value;
+}
+
+@mixin flex($value) {
+  flex: $value;
+}

@@ -1,0 +1,63 @@
+// abstracts
+// @import './abstracts/variables';
+// @import './abstracts/mixins';
+// @import './abstracts/functions';
+
+// base
+// @import './base/reset';
+// @import './base/typography';
+// @import './base/base';
+
+// components
+// @import './components/button';
+// @import './components/card';
+// @import './components/carousel';
+
+// layout
+// @import './layout/header';
+// @import './layout/footer';
+// @import './layout/navigation';
+// @import './layout/grid';
+
+// pages
+// @import './pages/home';
+// @import './pages/about';
+// @import './pages/contact';
+
+// themes
+// @import './themes/theme';
+// @import './themes/grid';
+
+// utilities
+// @import './utilities/flex';
+
+
+// vendors
+
+//abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+//layaut
+@import 'layout/header';
+@import 'layout/main';
+
+//utilities
+@import 'utilities/flex';
+
+//base
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+
+//components
+@import 'components/button';
+@import 'components/card';
+
+//pages
+@import 'pages/hero-banner';
+@import 'pages/about';
+@import 'pages/services';
+@import 'pages/clientes';
+
+@import 'grid';

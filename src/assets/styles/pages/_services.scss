@@ -1,0 +1,44 @@
+.servicios{
+    height: fit-content;
+    background-image: url('../img/fondo-servicios.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    h3{
+        font-size: 3rem;
+        color: $primary-blue;
+        
+        margin-top: 0;
+        text-align: center;
+
+    }
+
+    p{
+        font-size: 1.5rem;
+        color: #fff;    
+    }
+
+    .cards{
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        overflow-x: auto;
+        gap: 1rem;
+        padding-bottom: 2rem;
+        justify-content: space-between;
+        @include respond-to('lg'){
+            overflow-x: hidden;
+        }
+
+        
+    }
+
+    .cards::webkit-scrollbar {
+        width: 8px;     /* Tamaño del scroll en vertical */
+        height: 8px;    /* Tamaño del scroll en horizontal */
+        display: none;  /* Ocultar scroll */
+    }
+    
+}

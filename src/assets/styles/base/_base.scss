@@ -1,0 +1,11 @@
+section{
+
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    @include respond-to('sm'){
+        
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

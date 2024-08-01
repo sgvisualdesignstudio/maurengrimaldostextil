@@ -1,0 +1,37 @@
+
+.card-service{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background: rgba( #fff, .3);
+    flex-shrink: 0;
+    border: #fff 2px solid;
+    backdrop-filter: 10px;
+    @include respond-to('sm'){
+        width: 70%;
+    }
+    @include respond-to('md'){
+        width: 40%;
+    }
+    @include respond-to('lg'){
+        width: 23%;
+    }
+
+    img{
+        width: 100%;
+        border-radius:  14px 14px 0 0;
+        object-fit: fill;
+    }
+
+    &__content{
+        padding: 20px;
+        h4{
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin-bottom: 0;
+            color: #fff;
+            margin-top: 0;
+        }
+    }
+}

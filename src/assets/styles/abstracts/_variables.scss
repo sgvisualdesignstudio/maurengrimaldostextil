@@ -1,0 +1,26 @@
+// Ancho máximo del contenedor
+$container-width: 1410px;
+
+// Ancho de los márgenes
+$gutter-width: 15px;
+
+// Breakpoints para el responsive
+$breakpoints: (
+  'xs': 0px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px
+);
+
+
+// Variables de colores
+$primary-color: #060626;
+$secondary-purple: #3737AE;
+$primary-blue: #01A1D7;
+$primary-blue-dark: #046686;
+$primary-pink-dark: #D6006F;
+
+
+$font-size-base : 16px;

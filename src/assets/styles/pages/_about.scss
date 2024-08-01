@@ -1,0 +1,24 @@
+.aboutus{
+   
+    min-height: fit-content;
+    background-image: url('../img/aboutbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    h3{
+        color: $primary-pink-dark;
+        padding-top: 3rem;
+        font-size: 3rem;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    p{
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    img{
+        width: 100%;
+    }
+}

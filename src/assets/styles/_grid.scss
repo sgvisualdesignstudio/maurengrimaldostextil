@@ -1,0 +1,47 @@
+// src/styles/grid.scss
+@import 'abstracts/variables';
+
+
+.container {
+    max-width: $container-width;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 80%;
+    padding-right: $gutter-width;
+    padding-left: $gutter-width;
+  }
+  
+  .row {
+  
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -$gutter-width;
+    margin-left: -$gutter-width;
+  }
+  
+  .col {
+    padding-right: $gutter-width;
+    padding-left: $gutter-width;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  
+    @each $breakpoint, $value in $breakpoints {
+      @if $value != 0 {
+        @media (min-width: $value) {
+          &-#{$breakpoint}-1 { flex: 0 0 8.33%; max-width: 8.33%; }
+          &-#{$breakpoint}-2 { flex: 0 0 16.66%; max-width: 16.66%; }
+          &-#{$breakpoint}-3 { flex: 0 0 25%; max-width: 25%; }
+          &-#{$breakpoint}-4 { flex: 0 0 33.33%; max-width: 33.33%; }
+          &-#{$breakpoint}-5 { flex: 0 0 41.66%; max-width: 41.66%; }
+          &-#{$breakpoint}-6 { flex: 0 0 50%; max-width: 50%; }
+          &-#{$breakpoint}-7 { flex: 0 0 58.33%; max-width: 58.33%; }
+          &-#{$breakpoint}-8 { flex: 0 0 66.66%; max-width: 66.66%; }
+          &-#{$breakpoint}-9 { flex: 0 0 75%; max-width: 75%; }
+          &-#{$breakpoint}-10 { flex: 0 0 83.33%; max-width: 83.33%; }
+          &-#{$breakpoint}-11 { flex: 0 0 91.66%; max-width: 91.66%; }
+          &-#{$breakpoint}-12 { flex: 0 0 100%; max-width: 100%; }
+        }
+      }
+    }
+  }
