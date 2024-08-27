@@ -2,13 +2,15 @@ import '../assets/styles/main.scss';
 import Facebook from '../assets/img/facebook-icon.svg';
 import Instagram from '../assets/img/instagram-icon.svg';
 import Tiktok from '../assets/img/tik-tok-icon.svg';
-
+import location from '../assets/img/location-icon.svg';
+import whatsapp from '../assets/img/whatsapp-icon.svg';
+import mail from '../assets/img/mail-icon.svg';
 
 import {Map} from '../components/Map.jsx'
 
 export function Contact () {
     return (
-        <section className="contact">
+        <section className="contact" id='contacto'>
             <div className="container contact__card">
                 <div className="row ">
                     <div className="col-xs-12 col-lg-6">
@@ -17,9 +19,22 @@ export function Contact () {
                     <div className="col-xs-12 col-lg-6">
                         <div className="contact__card-body">
                             <h3>Ubicación</h3>
-                            <p><span></span>Dirección: Cra 52c #38a - 04</p>
-                            <p><span></span>Cel: 3144916563</p>
-                            <p><span></span>Mail: www.mauren.textil@gmail.com</p>
+                            <p className='contact__card-body__item'>
+                                <span>
+                                    <img src={location} alt="Ubicación" />
+                                </span>
+                                Dirección: Cra 52c #38a - 04
+                            </p>
+                            <p className='contact__card-body__item'>
+                                <span>
+                                   <img src={whatsapp} alt="Whatsapp" />
+                                </span>
+                                Cel: 3144916563</p>
+                            <p className='contact__card-body__item'>
+                                <span>
+                                    <img src={mail} alt="Mail" />
+                                </span>
+                                Mail: www.mauren.textil@gmail.com</p>
                         </div>
                         <div className="contact__card-form">
                             <h5>Contáctanos</h5>

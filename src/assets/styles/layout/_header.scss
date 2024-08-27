@@ -61,6 +61,14 @@ header{
         &:last-child{
           border-bottom: none;
         }
+        &.active {
+          a {
+            color: $primary-blue;
+            border-bottom: 2px solid $primary-blue;  
+            font-weight: bold;
+            
+          }
+        }
         @include respond-to('md'){
           border: none;
         }

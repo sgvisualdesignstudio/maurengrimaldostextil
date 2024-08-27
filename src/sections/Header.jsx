@@ -1,41 +1,69 @@
 import '../assets/styles/main.scss'; // Ruta corregida para el archivo SCSS
-import  logo  from '../assets/img/logo.svg';
+import logo from '../assets/img/logo.svg';
 import { BurgerButton } from '../components/BurgerButton';
-import  {useState} from 'react';
-// import styled from 'styled-components';
+import { useState, useEffect } from 'react';
 
-export function Header () {
-const [clicked, setClicked] = useState(false);
-const handleClick = () => {
-  // cuando esta true lo pasa a false y visecerá el menu
-  setClicked(!clicked);
-}
+export function Header() {
+  const [clicked, setClicked] = useState(false);
+  const [activeSection, setActiveSection] = useState("#inicio");
+
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
+
+  // Actualizar la sección activa según la URL
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+          const id = section.getAttribute("id");
+          setActiveSection(`#${id}`);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header className='roboto-light'>
-        <div className='container'>
-          <div className='row align-items-center'  >
-            <div className='col-xs-6 col-md-3'>
+      <header className="roboto-light">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-xs-6 col-md-3">
               <img width={70} src={logo} alt="Mauren Grilmaldos | Textil" />
             </div>
-            <div className='col-xs-6 col-md-9 '>
+            <div className="col-xs-6 col-md-9">
               <nav>
-                <ul className={` ${clicked ? 'active' : ''}`}>
-                  <li><a href="/">Inicio</a></li>
-                  <li><a href="/">Nosotros</a></li>
-                  <li><a href="/">Servicios</a></li>
-                  <li><a href="/">Galeria</a></li>
-                  <li><a href="/">Ubicación</a></li>
-                  <li><a href="/">Contacto</a></li>
+                <ul className={`menu ${clicked ? 'active' : ''}`}>
+                  <li className={activeSection === "#inicio" ? "active" : ""}>
+                    <a href="#inicio">Inicio</a>
+                  </li>
+                  <li className={activeSection === "#nosotros" ? "active" : ""}>
+                    <a href="#nosotros">Nosotros</a>
+                  </li>
+                  <li className={activeSection === "#servicios" ? "active" : ""}>
+                    <a href="#servicios">Servicios</a>
+                  </li>
+                  <li className={activeSection === "#galeria" ? "active" : ""}>
+                    <a href="#galeria">Galería</a>
+                  </li>
+                  <li className={activeSection === "#contacto" ? "active" : ""}>
+                    <a href="#contacto">Contacto</a>
+                  </li>
                 </ul>
-                <BurgerButton clicked={clicked} handleClick={handleClick}/>
+                <BurgerButton clicked={clicked} handleClick={handleClick} />
               </nav>
             </div>
           </div>
         </div>
       </header>
     </>
-    )
+  );
 }
-
-// const NavContainer = styled.nav``

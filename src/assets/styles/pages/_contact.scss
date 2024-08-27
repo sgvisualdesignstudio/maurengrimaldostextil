@@ -1,8 +1,14 @@
 .contact{
 
     padding:  8rem 2rem;
-    background-color: $primary-color;
-    color: #575656;
+    background-color: #541B7F;
+    background-image: url('../img/gradado-contacto.svg');
+    background-position: -18rem 1%;
+  color: #575656;
+  background-repeat: no-repeat;
+  @include respond-to('lg'){
+    background-position: -18rem -16rem;
+  }
     &__card{
         border-radius: 1rem;
         background-color: #fff;
@@ -12,6 +18,15 @@
                 font-size: 2.5rem;
                 color: $primary-blue;
                 margin: .8rem 0;
+            }
+            &__item{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-size: 1.5rem;
+                img{
+                    height: 30px;
+                }
             }
         }
 
@@ -55,13 +70,15 @@
             button{
                 margin-top: 1rem;
                 width: 100%;
-                height: 30px;
-                border-radius: 1rem;
+                
+                border-radius: 12px;
                 border: none;
-                background-color: $primary-blue;
+                background-color: #01A1D7;
                 color: #fff;
-                font-size: 1rem;
+                font-size: 1.2rem;
                 cursor: pointer;
+                padding: 1rem 0rem;
+                font-weight: bold;
                 &:hover{
                     background-color: $secondary-purple;
                     color: #fff;

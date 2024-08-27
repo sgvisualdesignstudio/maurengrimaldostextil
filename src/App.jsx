@@ -5,7 +5,9 @@ import { Service } from './sections/Service.jsx'
 import { Clientes} from './sections/Clientes.jsx'
 import { Galeria } from './sections/Galeria.jsx'
 import { Contact } from './sections/Contact.jsx'
+import ScrollToTop from "react-scroll-to-top"
 
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
  export function App() {
 
@@ -18,6 +20,15 @@ import { Contact } from './sections/Contact.jsx'
       <Clientes />
       <Galeria />
       <Contact />
+     
+      <ScrollToTop smooth color="#6f00ff" />
+      <FloatingWhatsApp className='floating-whatsapp'
+        avatar='https://avatars.githubusercontent.com/u/62678438?v=4'
+        accountName='Mauren Grimaldos | Textil'
+        statusMessage = ' '
+        chatMessage= 'Hola buen día ¿ en que te podemos ayudar?'
+        placeholder='Escribe aquí tu mensaje...'
+    />
     </>
   )
 }

@@ -5,13 +5,13 @@ import {Boton} from '../components/Boton';
 export function HeroBanner () {
     return (
         <>
-            <section className="hero-banner" >  
+            <section className="hero-banner" id='inicio' >  
                 <div className='container'>
                     <div className="row justify-content-center align-items-center">
                         <div className="col-xs-12 col-md-7">
                         <h1>Mauren Grimaldos</h1>
                         <h2>Soluciones textiles</h2>
-                        <Boton texto="Conoce más" href="#aboutus" />
+                        <Boton texto="Conoce más" href="#nosotros" />
                         </div>
                         <div className="col-xs-12 col-md-5">
                         <img src={uniformImg} alt="hero" />

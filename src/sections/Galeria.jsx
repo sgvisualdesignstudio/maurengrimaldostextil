@@ -16,7 +16,7 @@ import 'swiper/scss/pagination';
 export function Galeria () {
     return (
         <>
-          <section className='galeria'>
+          <section className='galeria'id='galeria' >
             <h3>Galeria</h3>
               <div className="container">
                 <Swiper className=''
@@ -24,6 +24,24 @@ export function Galeria () {
                  modules={[Navigation, Pagination ]}
                   spaceBetween={0}
                   slidesPerView={3}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
+                  breakpoints={{
+                    0: {
+                      slidesPerView: 1,
+
+                    },
+                    768: {
+                      slidesPerView: 2,
+                     
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      
+                    },
+                  }}
                   navigation
                   pagination={{ clickable: true }}
                   onSlideChange={() => console.log('slide change')}

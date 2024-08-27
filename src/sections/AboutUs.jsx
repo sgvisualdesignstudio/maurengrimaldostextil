@@ -1,15 +1,15 @@
 import '../assets/styles/main.scss';
-import deportista from '../assets/img/deportista.png';
+import deportista from '../assets/img/deportista.webp';
 
 export function AboutUs() {
     return(
-        <section className='aboutus' id='aboutus'>
+        <section className='aboutus' id='nosotros'>
             <div className="container">
                 <div className="row justify-content-center align-items-center">
                     <div className="col-xs-12 col-lg-6">
-                       <h3>About Us</h3>
+                       <h3>Nosotros</h3>
                        <p>
-                       Lorem ipsum dolor sit amet consectetur. Risus interdum auctor massa sem ut. Mattis nulla gravida viverra non. Bibendum netus auctor elit hendrerit malesuada. Ullamcorper id quam at sed adipiscing facilisi magnis tincidunt enim. Porttitor nullam id metus dignissim ornare natoque elementum nisl enim. Odio egestas et convallis cum mattis dictum tristique sit. 
+                       En Mauren Grimaldos Textil, nos especializamos en crear prendas que combinan calidad, estilo y funcionalidad. Con años de experiencia en la industria de la moda, nos dedicamos a satisfacer las necesidades de nuestros clientes ofreciendo soluciones personalizadas. Nuestro equipo de expertos trabaja con pasión y atención al detalle, desde el diseño hasta la confección, asegurando que cada pieza refleje la identidad única de nuestros clientes. Nos enorgullece ser una empresa comprometida con la innovación, la calidad y la satisfacción total de nuestros clientes.
                        </p>
                     </div>
                     <div className="col-xs-12 col-lg-6">
