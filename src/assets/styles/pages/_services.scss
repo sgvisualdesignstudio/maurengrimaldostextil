@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    z-index: 900;
     h3{
         font-size: 3rem;
         color: $primary-blue;
@@ -26,6 +27,7 @@
         max-width: 100%;
         overflow-x: auto;
         gap: 1rem;
+        padding-top: 1rem;
         padding-bottom: 2rem;
         justify-content: space-between;
         @include respond-to('lg'){

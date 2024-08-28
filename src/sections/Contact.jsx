@@ -11,7 +11,13 @@ import {Map} from '../components/Map.jsx'
 export function Contact () {
     return (
         <section className="contact" id='contacto'>
-            <div className="container contact__card">
+            <div 
+                data-aos="fade-up"
+                data-aos-delay="1200"
+                data-aos-duration="18000" 
+                className="container contact__card"
+
+            >
                 <div className="row ">
                     <div className="col-xs-12 col-lg-6">
                         <Map />

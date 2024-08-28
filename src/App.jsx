@@ -9,7 +9,16 @@ import ScrollToTop from "react-scroll-to-top"
 
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
  export function App() {
+  
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
 
   return (
     <>
