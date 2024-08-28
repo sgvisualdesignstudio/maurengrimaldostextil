@@ -17,7 +17,7 @@ export function HeroBanner () {
                         <Boton texto="Conoce más" href="#nosotros" />
                         </div>
                         <div className="col-xs-12 col-md-5">
-                        <img data-aos="fade-up" src={uniformImg} alt="hero" />
+                        <img data-aos="fade-right" src={uniformImg} alt="hero" />
                         </div>
                     </div>
                     

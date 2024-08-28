@@ -13,8 +13,8 @@ export function Contact () {
         <section className="contact" id='contacto'>
             <div 
                 data-aos="fade-up"
-                data-aos-delay="1200"
-                data-aos-duration="18000" 
+                data-aos-delay="800"
+                data-aos-duration="14000" 
                 className="container contact__card"
 
             >

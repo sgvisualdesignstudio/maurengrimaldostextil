@@ -7,8 +7,12 @@
     }
 
     iframe{
-        border-radius: 1rem  0rem 0rem 1rem  ;
+        border-radius: 1rem  1rem 0rem 0rem  ;
         height: 100%;
-        width: 100%
+        width: 100%;
+
+        @include respond-to('lg'){
+            border-radius: 1rem  0rem 0rem 1rem  ;
+        }
     }
 }
