@@ -5,7 +5,7 @@
     background-size: cover;
     padding-top: 20%;
     @include respond-to('sm'){
-        padding-top: 10%;
+        padding-top: 0%;
         padding-left: 5%;
         padding-right: 5%;
     }
